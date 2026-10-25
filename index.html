@@ -204,6 +204,36 @@
         <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a
         >. Coded by <a href="#">Nebiyat Hawi</a>.
       </footer>
-    </div>
+      </div>
+    <script>
+      const menuButton = document.querySelector("#menu-button");
+      const navigation = document.querySelector("#navigation");
+
+      menuButton.addEventListener("click", () => { 
+        const isExpanded =
+          menuButton.getAttribute("aria-expanded") === "true";
+
+        navigation.classList.toggle("hidden");
+        navigation.classList.toggle("flex");
+
+        menuButton.setAttribute("aria-expanded", String(!isExpanded));
+        menuButton.setAttribute(
+          "aria-label",
+          isExpanded ? "Open navigation" : "Close navigation"
+        );
+      });
+
+      navigation.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          if (window.innerWidth < 768) {
+            navigation.classList.add("hidden");
+            navigation.classList.remove("flex");
+            menuButton.setAttribute("aria-expanded", "false");
+            menuButton.setAttribute("aria-label", "Open navigation");
+          }
+        });
+      });
+    </script>
+    
   </body>
 </html>

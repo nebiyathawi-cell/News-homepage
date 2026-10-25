@@ -71,4 +71,4 @@ These challenges helped me understand what I need to improve in my frontend deve
 1. Clone this repository:
 
    ```bash
-   git clone YOUR_REPOSITORY_URL
+    https://github.com/nebiyathawi-cell/News-homepage.git
