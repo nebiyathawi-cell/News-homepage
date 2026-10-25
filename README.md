@@ -22,7 +22,7 @@ Users should be able to:
 
 ### Screenshot
 
-![News Homepage Screenshot](./assets/images/Screenshot%20(48).png)
+![News Homepage Screenshot](./Screenshot%20(48).png)
 
 ## Built With
 
